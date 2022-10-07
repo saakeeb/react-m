@@ -1,6 +1,6 @@
 import React from 'react';
 import Movies from './Movies/Movies';
-import './global/main.css'
+import './global/main.css';
 
 const Main = () => {
     return (
