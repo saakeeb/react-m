@@ -21,4 +21,9 @@ const ListGroupComp = (props) => {
     );
 };
 
+ListGroupComp.defaultProps = {
+    textProperty:'name',
+    valueProperty:'_id'
+}
+
 export default ListGroupComp;

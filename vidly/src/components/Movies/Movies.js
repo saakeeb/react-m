@@ -81,8 +81,8 @@ const Movies = () => {
                     <ListGroupComp
                         onGenresChange={handleGenresChange}
                         genres={genres}
-                        textProperty='name'
-                        valueProperty='_id'
+                        // textProperty='name'
+                        // valueProperty='_id'
                     />
                 </div>
                 <div className='col'>
