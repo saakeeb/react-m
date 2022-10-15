@@ -2,7 +2,13 @@ import React from 'react';
 import { ListGroup } from 'react-bootstrap';
 
 const ListGroupComp = (props) => {
-    const { onGenresChange, genres, textProperty, valueProperty } = props;
+    const {
+        onGenresChange,
+        genres,
+        textProperty,
+        valueProperty,
+        selectedGenres
+    } = props;
     //with this textProperty, valueProperty we can assign dynamic value to the props
     return (
         <ListGroup as="ul">
@@ -12,6 +18,7 @@ const ListGroupComp = (props) => {
                         key={genre[valueProperty]}
                         as="li"
                         onClick={() => onGenresChange(genre)}
+                        className={genre === selectedGenres ? 'active clickable' : 'clickable'}
                     >
                         {genre[textProperty]}
                     </ListGroup.Item>
