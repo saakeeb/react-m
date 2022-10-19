@@ -5,6 +5,7 @@ import './global/main.css';
 const Main = () => {
     return (
         <div className='main'>
+            
             <Movies />
         </div>
     );
