@@ -1,12 +1,29 @@
 import React from 'react';
-import Movies from '../Movies/Movies';
+import { Outlet } from 'react-router-dom';
+import Navbars from '../Navbar/Navbars';
+import './Layouts.css';
 
 const Layouts = () => {
-    return (
-        <>
-          <Movies />  
-        </>
-    );
+  return (
+    <div className="layouts">
+      <Navbars />
+      <Outlet />
+      <div class="bg-area" >
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div >
+    </div>
+  );
 };
 
 export default Layouts;

@@ -1,5 +1,10 @@
 .main {
     padding: 25px 15px;
+    position: relative;
+    background: #4e54c8;
+    background: linear-gradient(90deg, rgba(221,221,221,1) 0%, rgba(94,122,201,1) 100%);
+    width: 100%;
+    height: 100vh;
 }
 
 .movies-table {
@@ -7,6 +12,12 @@
     height: 100%;
 }
 
-.clickable{
+.clickable {
     cursor: pointer;
+}
+
+.nav-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
 }
