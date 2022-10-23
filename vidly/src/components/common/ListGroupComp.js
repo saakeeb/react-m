@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListGroup } from 'react-bootstrap';
+import { Dropdown, DropdownButton, ListGroup } from 'react-bootstrap';
 
 const ListGroupComp = (props) => {
     const {
@@ -13,7 +13,7 @@ const ListGroupComp = (props) => {
     return (
         <ListGroup as="ul">
             {
-                genres.map((genre) => 
+                genres.map((genre) =>
                     <ListGroup.Item
                         key={genre[valueProperty]}
                         as="li"
@@ -29,8 +29,8 @@ const ListGroupComp = (props) => {
 };
 
 ListGroupComp.defaultProps = {
-    textProperty:'name',
-    valueProperty:'_id'
+    textProperty: 'name',
+    valueProperty: '_id'
 }
 
 export default ListGroupComp;

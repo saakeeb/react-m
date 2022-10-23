@@ -19,7 +19,7 @@ const PaginationComp = (props) => {
         <>
             {
                 pageArray.length > 1 ? (
-                    <Pagination className="justify-content-end me-3 mt-4">
+                    <Pagination className="justify-content-end mt-4">
                         <Pagination.First onClick={onFirstPage}/>
                         <Pagination.Prev onClick={onPrevPage}/>
                         {

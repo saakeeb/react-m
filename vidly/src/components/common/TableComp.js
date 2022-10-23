@@ -6,7 +6,7 @@ import TableHeader from './TableHeader';
 const TableComp = (props) => {
     const { columns, sortColumn, onTableSort, data } = props;
     return (
-        <Table hover className='movies-table'>
+        <Table  className='movies-table'>
             <TableHeader
                 columns={columns}
                 sortColumn={sortColumn} //object for sorting header title to trace asc or desc

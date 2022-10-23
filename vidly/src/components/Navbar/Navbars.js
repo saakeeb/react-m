@@ -1,12 +1,13 @@
 import { Container, Nav, Navbar, NavbarBrand } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
-import Image from 'react-bootstrap/Image'
+import Image from 'react-bootstrap/Image';
+import './Navbar.css';
 
 export default function Navbars() {
 
     return (
         <>
-            <Navbar bg="light" variant="light">
+            <Navbar bg="light" variant="light" className='py-1'>
                 <Container>
                     <NavbarBrand>
                         <Link to="/">
@@ -16,10 +17,10 @@ export default function Navbars() {
                             ></Image>
                         </Link>
                     </NavbarBrand>
-                    <Nav className="me-auto">
-                        <NavLink to="/" className='px-2 nav-item nav-link'>Movies</NavLink>
-                        <NavLink to="/customers" className='px-2 nav-item nav-link'>Customers</NavLink>
-                        <NavLink to="/rentals" className='px-2 nav-item nav-link'>Rentals</NavLink>
+                    <Nav className="me-auto nav-container">
+                        <NavLink to="/" className='px-2 nav-item nav-link nav-home' end>Movies</NavLink>
+                        <NavLink to="/customers" className='px-2 nav-item nav-link nav-slide'>Customers</NavLink>
+                        <NavLink to="/rentals" className='px-2 nav-item nav-link nav-slide'>Rentals</NavLink>
                     </Nav>
                 </Container>
             </Navbar>

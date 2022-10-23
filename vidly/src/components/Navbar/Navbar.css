@@ -1,0 +1,19 @@
+.nav-container .nav-link {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+}
+
+.nav-container .nav-link.active {
+    background: linear-gradient(to right, #3673aa 10%, #4fa9d3 50%, #6fbb71 60%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 1.5s linear infinite;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}

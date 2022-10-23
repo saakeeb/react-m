@@ -39,11 +39,11 @@ const Movies = () => {
                         // valueProperty='_id'
                     />
                 </div>
-                <div className='col'>
+                <div className='col px-3'>
                     {
                         filterdMovies.length ? (
                             <>
-                                <h3>There {filterdMovies.length > 1 ? 'are ' + filterdMovies.length + ' movies' : 'is ' + filterdMovies.length + ' movie'} in the database.</h3>
+                                <h3 className='list-title display-6 mb-4 mt-3'>There {filterdMovies.length > 1 ? 'are ' + filterdMovies.length + ' movies' : 'is ' + filterdMovies.length + ' movie'} in the database.</h3>
                                 <MoviesTable
                                     paginateMovies={paginateMovies}
                                     onWishList={handleWishList}

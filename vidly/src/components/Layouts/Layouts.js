@@ -6,8 +6,10 @@ import './Layouts.css';
 const Layouts = () => {
   return (
     <div className="layouts">
-      <Navbars />
-      <Outlet />
+      <div className="main-layouts">
+        <Navbars />
+        <Outlet />
+      </div>
       <div class="bg-area" >
         <ul class="circles">
           <li></li>
