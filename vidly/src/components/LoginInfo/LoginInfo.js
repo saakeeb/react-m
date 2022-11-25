@@ -35,6 +35,7 @@ const LoginInfo = () => {
                         value={formValue.action.username}
                         handleChange={handleChange}
                         text="We'll never share your data with anyone else."
+                        autoFocus="autofocus"
                     />
                     <InputForm
                         controlId="floatingPassword"
@@ -44,6 +45,7 @@ const LoginInfo = () => {
                         value={formValue.action.password}
                         handleChange={handleChange}
                         text=""
+                        autoFocus=""
                     />
                     <Button variant="primary" type="submit" className='d-block ms-auto mt-3'>Submit</Button>
                     {/* <input type="submit" value="Submit" className='d-block ms-auto mt-3 btn btn-primary' /> */}
