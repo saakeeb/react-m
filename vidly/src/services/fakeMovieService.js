@@ -65,6 +65,62 @@ const movies = [
     genre: { _id: "5b21ca3eeb7f6fbccd471818", name: "Action" },
     numberInStock: 7,
     dailyRentalRate: 3.5
+  },
+  {
+    _id: "5b21ca3eeb7f6fbccd471822",
+    title: "Mad Max: Fury Road",
+    genre: { _id: "5b21ca3eeb7f6fbccd471818", name: "Action" },
+    numberInStock: 9,
+    dailyRentalRate: 7.5
+  },
+  {
+    _id: "5b21ca3eeb7f6fbccd471823",
+    title: "The Dark Knight",
+    genre: { _id: "5b21ca3eeb7f6fbccd471818", name: "Action" },
+    numberInStock: 8,
+    dailyRentalRate: 8
+  },
+  {
+    _id: "5b21ca3eeb7f6fbccd471824",
+    title: "The Hangover",
+    genre: { _id: "5b21ca3eeb7f6fbccd471814", name: "Comedy" },
+    numberInStock: 5,
+    dailyRentalRate: 4
+  },
+  {
+    _id: "5b21ca3eeb7f6fbccd471825",
+    title: "Johnny English",
+    genre: { _id: "5b21ca3eeb7f6fbccd471814", name: "Comedy" },
+    numberInStock: 7,
+    dailyRentalRate: 5
+  },
+  {
+    _id: "5b21ca3eeb7f6fbccd471826",
+    title: "Ted",
+    genre: { _id: "5b21ca3eeb7f6fbccd471814", name: "Comedy" },
+    numberInStock: 3,
+    dailyRentalRate: 2
+  },
+  {
+    _id: "5b21ca3eeb7f6fbccd471827",
+    title: "The Gray Man",
+    genre: { _id: "5b21ca3eeb7f6fbccd471820", name: "Thriller" },
+    numberInStock: 9,
+    dailyRentalRate: 7
+  },
+  {
+    _id: "5b21ca3eeb7f6fbccd471828",
+    title: "No Time to Die",
+    genre: { _id: "5b21ca3eeb7f6fbccd471820", name: "Thriller" },
+    numberInStock: 5,
+    dailyRentalRate: 4
+  },
+  {
+    _id: "5b21ca3eeb7f6fbccd471829",
+    title: "Joker",
+    genre: { _id: "5b21ca3eeb7f6fbccd471820", name: "Thriller" },
+    numberInStock: 4,
+    dailyRentalRate: 2
   }
 ];
 

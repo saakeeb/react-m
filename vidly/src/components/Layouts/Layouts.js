@@ -10,8 +10,8 @@ const Layouts = () => {
         <Navbars />
         <Outlet />
       </div>
-      <div class="bg-area" >
-        <ul class="circles">
+      <div className="bg-area" >
+        <ul className="circles">
           <li></li>
           <li></li>
           <li></li>

@@ -7,7 +7,7 @@ export default function Navbars() {
 
     return (
         <>
-            <Navbar bg="light" variant="light" className='py-1'>
+            <Navbar bg="light" variant="light" className='py-1 mb-5'>
                 <Container>
                     <NavbarBrand>
                         <Link to="/">
@@ -21,6 +21,7 @@ export default function Navbars() {
                         <NavLink to="/" className='px-2 nav-item nav-link nav-home' end>Movies</NavLink>
                         <NavLink to="/customers" className='px-2 nav-item nav-link nav-slide'>Customers</NavLink>
                         <NavLink to="/rentals" className='px-2 nav-item nav-link nav-slide'>Rentals</NavLink>
+                        <NavLink to="/login" className='px-2 nav-item nav-link nav-slide'>Login</NavLink>
                     </Nav>
                 </Container>
             </Navbar>

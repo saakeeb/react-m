@@ -29,7 +29,7 @@ const Movies = () => {
 
     return (
         <>
-            <div className="row m-1">
+            <div className="row m-auto container align-items-center">
                 <div className='col-sm-12 col-md-3 col-lg-2 my-3'>
                     <ListGroupComp
                         onGenresChange={handleGenresChange}
