@@ -7,7 +7,7 @@ import { paginate } from '../utils/Paginate';
 const useMovies = () => {
     const [movies, setMovies] = useState([]);
     let [loveIcon, setLoveIcon] = useState(false);
-    let [pageNumberContainer, setPageNumberContainer] = useState(4);
+    let [pageNumberContainer, setPageNumberContainer] = useState(5);
     let [currentPage, setCurrentPage] = useState(1);
     const [genres, setGenres] = useState([]);
     const [selectedGenres, setSelectedGenres] = useState('');

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FloatingLabel, Form } from 'react-bootstrap';
 
-const InputForm = ({ controlId, label, name, type, value, handleChange, text, autoFocus }) => {
+const InputForm = ({ controlId, label, name, type, text, error, ...rest }) => {
     return (
         <>
             <FloatingLabel
@@ -12,12 +12,17 @@ const InputForm = ({ controlId, label, name, type, value, handleChange, text, au
                 <Form.Control
                     type={type}
                     placeholder={label}
-                    value={value}
-                    onChange={handleChange}
                     name={name}
-                    autoFocus={autoFocus}
+                    {...rest}
+                    // value={value}
+                    // onChange={onChange}
+                    // autoFocus={autoFocus}
                 />
                 <Form.Text className="text-muted">{text}</Form.Text>
+                {
+                    error && 
+                    <Form.Text className="alert alert-danger d-block"> {error} </Form.Text>
+                }
             </FloatingLabel>
         </>
     );
