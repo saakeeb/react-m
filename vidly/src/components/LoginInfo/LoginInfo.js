@@ -1,9 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import Joi from 'joi-browser';
-import { Button, Form } from 'react-bootstrap';
-import InputForm from './InputForm';
-import useFormInput from './useFormInput';
+import { Form } from 'react-bootstrap';
+import useFormInput from '../../hooks/useFormInput';
 import './LoginInfo.css';
 
 const LoginInfo = () => {
@@ -89,7 +88,7 @@ const LoginInfo = () => {
     // const { data, errors } = formValue;
     return (
         <div className="container">
-            <h2>login</h2>
+            <h2>Login</h2>
             <div className="form-container d-block m-auto">
                 <Form className='mt-5' onSubmit={handleSubmit}>
                     {renderInput({

@@ -3,6 +3,8 @@ import PaginationComp from '../common/PaginationComp';
 import '../global/main.css'
 import MoviesTable from '../MoviesTable/MoviesTable';
 import useMovies from '../../hooks/useMovies';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Movies = () => {
     let [
@@ -28,8 +30,8 @@ const Movies = () => {
     ] = useMovies();
 
     return (
-        <>
-            <div className="row m-auto container align-items-center">
+        <div className='container'>
+            <div className="row m-auto align-items-center">
                 <div className='col-sm-12 col-md-3 col-lg-2 my-3'>
                     <ListGroupComp
                         onGenresChange={handleGenresChange}
@@ -68,7 +70,16 @@ const Movies = () => {
                     }
                 </div>
             </div>
-        </>
+            <Button
+                variant="primary"
+                type="submit"
+                className='d-block m-auto mt-3 css-button-sliding css-button-sliding-to-left--primary'
+            >
+                <Link to="/movies/new">
+                    Add Movies
+                </Link>
+            </Button>
+        </div>
         
     );
 };

@@ -23,12 +23,125 @@
     border-radius: 50% !important;
 }
 
-tbody .t-body a{
+tbody .t-body a {
     color: #000;
     font-weight: 500;
     text-decoration: none;
 }
 
-tbody .t-body a:hover{
+tbody .t-body a:hover {
     text-decoration: underline;
 }
+
+/* Button arrow hover 2*/
+.css-button-sliding-to-left--primary,
+.css-button-sliding-to-left--primary:disabled,
+.css-button-sliding-to-left--red,
+.css-button-sliding-to-left--red:disabled {
+    min-width: 120px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: #edebeb;
+    overflow: hidden;
+    border: 2px solid #0d6efd;
+    color: #0d6efd;
+}
+
+.css-button-sliding-to-left--red,
+.css-button-sliding-to-left--red:disabled {
+    border: 2px solid #dc3545;
+    color: #dc3545;
+    min-width: auto;
+    height: auto;
+}
+
+.css-button-sliding-to-left--primary:hover,
+.css-button-sliding-to-left--red:hover {
+    color: #fff;
+}
+
+.css-button-sliding-to-left--primary:hover:after,
+.css-button-sliding-to-left--red:hover:after {
+    width: 100%;
+}
+
+.css-button-sliding-to-left--primary:after,
+.css-button-sliding-to-left--red:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #0d6efd;
+}
+
+.css-button-sliding-to-left--red:after {
+    background: #dc3545;
+}
+
+.css-button-sliding a {
+    text-decoration: none;
+}
+
+.css-button-sliding:hover a {
+    color: #fff;
+}
+
+/* Button arrow hover 2*/
+
+/* List group select hover */
+.list-group .clickable.list-group-item {
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border: none;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+    background: #fff;
+    z-index: 1;
+}
+
+.list-group .clickable.list-group-item.active {
+    background: #4433ff;
+}
+
+.list-group .clickable.list-group-item:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.list-group .clickable.list-group-item:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+    background-color: #dcdcdc;
+    right: 0;
+}
+
+.list-group .active.clickable.list-group-item:after {
+    background-color: #3a86ff;
+}
+
+.list-group .clickable.list-group-item:active {
+    top: 2px;
+    background-color: #3a86ff;
+}
+
+/* List group select hover */

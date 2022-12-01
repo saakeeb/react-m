@@ -18,7 +18,7 @@ const MoviesTable = (props) => {
         {
             key: 'delete',
             content: movie => <button
-                className="btn btn-danger btn-sm"
+                className="btn btn-sm css-button-sliding-to-left--red"
                 onClick={() => onDeleteMovie(movie)}
             >
                 Delete

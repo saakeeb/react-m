@@ -1,8 +1,7 @@
-// import Input from "./input";
 // import Select from "./select";
 import Joi from 'joi-browser';
 import { Button } from 'react-bootstrap';
-import InputForm from './InputForm';
+import InputForm from '../components/common/Form/InputForm';
 
 function useFormInput(props) {
     const { schema, doSubmit, data, setData, error, setError } = props;
@@ -55,9 +54,9 @@ function useFormInput(props) {
         return (
             <Button
                 disabled={validate()}
-                variant="primary"
+                // variant="primary"
                 type="submit"
-                className='d-block ms-auto mt-3'
+                className='d-block ms-auto mt-3 css-button-sliding-to-left--primary'
             >
                 {label}
             </Button>
