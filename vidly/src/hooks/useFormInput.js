@@ -2,6 +2,7 @@
 import Joi from 'joi-browser';
 import { Button } from 'react-bootstrap';
 import InputForm from '../components/common/Form/InputForm';
+import SelectForm from '../components/common/Form/SelectForm';
 
 function useFormInput(props) {
     const { schema, doSubmit, data, setData, error, setError } = props;
@@ -79,24 +80,24 @@ function useFormInput(props) {
         );
     };
 
-    // const renderSelect = ({ label, name, options }) => {
-    //     return (
-    //         <Select
-    //             name={name}
-    //             value={data[name]}
-    //             label={label}
-    //             options={options}
-    //             onChange={changeHandler}
-    //             error={error[name]}
-    //         />
-    //     );
-    // };
+    const renderSelect = ({ label, name, options }) => {
+        return (
+            <SelectForm
+                name={name}
+                value={data[name]}
+                label={label}
+                options={options}
+                onChange={handleChange}
+                error={error[name]}
+            />
+        );
+    };
 
     return {
         handleSubmit,
         renderButton,
         renderInput,
-        // renderSelect
+        renderSelect
     };
 }
 
