@@ -14,7 +14,7 @@ const TableBody = (props) => {
         <tbody>
             {
                 data.map(item => (
-                    <tr key={item._id} height={5}>
+                    <tr key={item._id} height={5} className='hvr-float'>
                         {
                             columns.map(column => 
                                 <td key={item._id + (column.path || column.key)} className='p-1 t-body'>{dataColumns(item, column)}</td>

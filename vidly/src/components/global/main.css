@@ -145,3 +145,22 @@ tbody .t-body a:hover {
 }
 
 /* List group select hover */
+
+/* List Hover effect */
+.hvr-float {
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: all;
+    background: rgba(93, 167, 219, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(93, 167, 219, 0.4);
+}
+
+.hvr-float:hover {
+    transform: translateY(-5px) scaleX(1.02) scaleY(1.02);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* List Hover effect */
