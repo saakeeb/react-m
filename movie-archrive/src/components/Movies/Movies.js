@@ -5,6 +5,7 @@ import MoviesTable from '../MoviesTable/MoviesTable';
 import useMovies from '../../hooks/useMovies';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Searchbox from '../common/Searchbox';
 
 const Movies = () => {
     let [
@@ -18,6 +19,7 @@ const Movies = () => {
         filterdMovies,
         numberOfPageContainInArray,
         paginateMovies,
+        searchQuery,
         handleDeleteMovie,
         handleWishList,
         handlePageChange,
@@ -26,7 +28,8 @@ const Movies = () => {
         handlePageFirst,
         handlePageLast,
         handleGenresChange,
-        handleTableSort
+        handleTableSort,
+        handleSearch
     ] = useMovies();
 
     return (
@@ -42,10 +45,12 @@ const Movies = () => {
                     />
                 </div>
                 <div className='col px-3'>
+                    <Searchbox value={searchQuery} onChange={handleSearch} />
                     {
                         filterdMovies.length ? (
                             <>
                                 <h3 className='list-title display-6 mb-4 mt-3'>There {filterdMovies.length > 1 ? 'are ' + filterdMovies.length + ' movies' : 'is ' + filterdMovies.length + ' movie'} in the database.</h3>
+                                
                                 <MoviesTable
                                     paginateMovies={paginateMovies}
                                     onWishList={handleWishList}

@@ -10,7 +10,8 @@ const useMovies = () => {
     let [pageNumberContainer, setPageNumberContainer] = useState(5);
     let [currentPage, setCurrentPage] = useState(1);
     const [genres, setGenres] = useState([]);
-    const [selectedGenres, setSelectedGenres] = useState('');
+    const [selectedGenres, setSelectedGenres] = useState(null);
+    const [searchQuery, setSearchQuery] = useState('');
     const [sortColumn, setSortColumn] = useState({ path: 'title', order: 'asc' });
 
     useEffect(() => {
@@ -19,7 +20,17 @@ const useMovies = () => {
         setMovies(getMovies());
     }, []);
 
-    const filterdMovies = selectedGenres && selectedGenres._id ? movies.filter(m => m.genre._id === selectedGenres._id) : movies;
+    // const filterdMovies = selectedGenres && selectedGenres._id ? movies.filter(m => m.genre._id === selectedGenres._id) : movies;
+    let filterdMovies = movies;
+    //search query
+    if (searchQuery) {
+        filterdMovies = movies.filter(m=> m.title.toLowerCase().startsWith(searchQuery.toLowerCase()));
+    }
+    //filter query
+    else if (selectedGenres && selectedGenres._id) {
+        filterdMovies = movies.filter(m => m.genre._id === selectedGenres._id);
+    }
+    //sorted query
     const sortedMovies = _.orderBy(filterdMovies, [sortColumn.path], [sortColumn.order]);
     const numberOfPageContainInArray = Math.ceil(filterdMovies.length / pageNumberContainer);
     const paginateMovies = paginate(sortedMovies, currentPage, pageNumberContainer);
@@ -74,6 +85,7 @@ const useMovies = () => {
     const handleGenresChange = genre => {
         setSelectedGenres(genre);
         setCurrentPage(1);
+        setSearchQuery('');
     }
 
     const handleTableSort = sortColumn => {
@@ -81,6 +93,13 @@ const useMovies = () => {
         // tableSort.order = (sortColumn.order === 'asc') ? 'desc' : 'asc';
         setSortColumn(sortColumn);
     }
+
+    const handleSearch = (query) => {
+        setSelectedGenres(null);
+        setCurrentPage(1);
+        setSearchQuery(query);
+    }
+
     return (
         [
             movies,
@@ -93,6 +112,7 @@ const useMovies = () => {
             filterdMovies,
             numberOfPageContainInArray,
             paginateMovies,
+            searchQuery,
             handleDeleteMovie,
             handleWishList,
             handlePageChange,
@@ -101,7 +121,8 @@ const useMovies = () => {
             handlePageFirst,
             handlePageLast,
             handleGenresChange,
-            handleTableSort
+            handleTableSort,
+            handleSearch
         ]
     );
 };
