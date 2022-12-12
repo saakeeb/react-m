@@ -40,17 +40,28 @@ const Movies = () => {
                         onGenresChange={handleGenresChange}
                         genres={genres}
                         selectedGenres={selectedGenres}
-                        // textProperty='name'
-                        // valueProperty='_id'
+                    // textProperty='name'
+                    // valueProperty='_id'
                     />
                 </div>
                 <div className='col px-3'>
-                    <Searchbox value={searchQuery} onChange={handleSearch} />
+                    <div className="d-flex m-auto align-items-center justify-content-between">
+                        <Searchbox value={searchQuery} onChange={handleSearch} />
+                        <Button
+                            variant="primary"
+                            type="submit"
+                            className='css-button-sliding css-button-sliding-to-left--primary ms-3'
+                        >
+                            <Link to="/movies/new">
+                                Add Movies
+                            </Link>
+                        </Button>
+                    </div>
                     {
                         filterdMovies.length ? (
                             <>
                                 <h3 className='list-title display-6 mb-4 mt-3'>There {filterdMovies.length > 1 ? 'are ' + filterdMovies.length + ' movies' : 'is ' + filterdMovies.length + ' movie'} in the database.</h3>
-                                
+
                                 <MoviesTable
                                     paginateMovies={paginateMovies}
                                     onWishList={handleWishList}
@@ -75,17 +86,9 @@ const Movies = () => {
                     }
                 </div>
             </div>
-            <Button
-                variant="primary"
-                type="submit"
-                className='d-block m-auto mt-3 css-button-sliding css-button-sliding-to-left--primary'
-            >
-                <Link to="/movies/new">
-                    Add Movies
-                </Link>
-            </Button>
+            
         </div>
-        
+
     );
 };
 

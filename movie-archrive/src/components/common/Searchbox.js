@@ -8,7 +8,7 @@ const Searchbox = ({ onChange, value }) => {
             <FloatingLabel
                 controlId="floatingQuery"
                 label="Search Movies..."
-                className="mb-3"
+                className="d-block w-75"
             >
                 <Form.Control
                     type="text"
