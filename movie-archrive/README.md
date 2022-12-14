@@ -11,13 +11,14 @@ This project was developed with ReactJs
 
 ### Details
 - A  SPA web application with a Movie data...
-##Pagination, 
-##Sorting, 
-##Listing data with category, 
-##React hooks, 
-##lodash, 
-##bootstrap, 
-##animation, 
-##clean and reusable code.
+- Pagination, 
+- Sorting, 
+- Listing data with category, 
+- React hooks, 
+- lodash, 
+- bootstrap, 
+- animation, 
+- clean and reusable code.
 
 ### End
+-------------
