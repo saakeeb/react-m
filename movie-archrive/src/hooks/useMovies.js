@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import _, { orderBy } from 'lodash';
+import { toast } from 'react-toastify';
 import { getGenres } from '../services/fakeGenreService';
 import { getMovies } from '../services/fakeMovieService';
 import { paginate } from '../utils/Paginate';
@@ -36,6 +37,7 @@ const useMovies = () => {
     const paginateMovies = paginate(sortedMovies, currentPage, pageNumberContainer);
 
     const handleDeleteMovie = (movie) => {
+        toast.warn("Movie Deleted");
         const newMovies = movies.filter(m => m._id !== movie._id);
         setMovies(newMovies);
     }

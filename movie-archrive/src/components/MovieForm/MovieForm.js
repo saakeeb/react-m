@@ -57,7 +57,8 @@ const MovieForm = () => {
         data,
         setData,
         error,
-        setError
+        setError,
+        message: 'Successfully Movie Added'
     };
 
     const { renderInput, renderSelect, renderButton, handleSubmit } = useFormInput(rule);

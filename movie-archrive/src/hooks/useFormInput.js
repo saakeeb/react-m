@@ -1,11 +1,12 @@
 // import Select from "./select";
 import Joi from 'joi-browser';
 import { Button } from 'react-bootstrap';
+import { toast } from 'react-toastify';
 import InputForm from '../components/common/Form/InputForm';
 import SelectForm from '../components/common/Form/SelectForm';
 
 function useFormInput(props) {
-    const { schema, doSubmit, data, setData, error, setError } = props;
+    const { schema, doSubmit, data, setData, error, setError, message } = props;
 
     const validate = () => {
         const options = { abortEarly: false };
@@ -44,6 +45,7 @@ function useFormInput(props) {
     };
 
     const handleSubmit = (e) => {
+        toast.success(message);
         e.preventDefault();
         setError(validate() || {});
         if (Object.keys(error).length) return;

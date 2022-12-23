@@ -14,7 +14,7 @@ const SignupInfo = () => {
     
     const rule = {
         schema: {
-            name: Joi.string().alphanum().max(20).required().label("Name"),
+            name: Joi.string().max(20).required().label("Name"),
             username: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).required().label("Email"),
             password: Joi.string().min(6).required().label("Password")
         },
@@ -25,7 +25,8 @@ const SignupInfo = () => {
         data,
         setData,
         error,
-        setError
+        setError,
+        message: 'Sign Up Successful'
     };
 
     const { renderInput, renderButton, handleSubmit } = useFormInput(rule);
@@ -42,7 +43,7 @@ const SignupInfo = () => {
                         text: "We'll never share your data with anyone else."
                     })}
                     {renderInput({
-                        label: "Username",
+                        label: "Email",
                         name: "username",
                         id: "floatingUsername",
                         type: "email",

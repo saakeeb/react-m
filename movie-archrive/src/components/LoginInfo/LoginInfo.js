@@ -24,7 +24,8 @@ const LoginInfo = () => {
         data,
         setData,
         error,
-        setError
+        setError,
+        message: 'Login Successful'
     };
 
     const { renderInput, renderButton, handleSubmit } = useFormInput(rule);
@@ -90,7 +91,10 @@ const LoginInfo = () => {
         <div className="container">
             <h2>Login</h2>
             <div className="form-container d-block m-auto">
-                <Form className='mt-5' onSubmit={handleSubmit}>
+                <Form
+                    className='mt-5'
+                    onSubmit={handleSubmit}
+                >
                     {renderInput({
                         label: "Username",
                         name: "username",
