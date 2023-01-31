@@ -23,7 +23,8 @@ After comparing the two virtual doms it only mounts/updates the real dom with th
 Unmounting phase: in this process, it cleans up the component (like the listener, set timeout) before we want to remove some element
 
 ``` bash
-Create typescript file with the comand
+Create typescript file with the command
 npm i typescript
 npx tsc --init --sourceMap --rootDir src --outDir dist 
+tsc
 ```
